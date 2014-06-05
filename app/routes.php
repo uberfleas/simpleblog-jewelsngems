@@ -11,7 +11,15 @@
 |
 */
 
+//Login Route
+Route::any("/users", array(
+	"as"	=> "users/login",
+	"uses"	=> "UserController@loginAction"
+));
+
 Route::get('/', function()
 {
 	return View::make('home');
 });
+
+Route::resource('users', 'UserController');
