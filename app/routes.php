@@ -12,10 +12,10 @@
 */
 
 //Login Route
-/*Route::any("/users", array(
+Route::any("/users", array(
 	"as"	=> "users/login",
 	"uses"	=> "UserController@loginAction"
-));*/
+));
 
 Route::get('/', function()
 {

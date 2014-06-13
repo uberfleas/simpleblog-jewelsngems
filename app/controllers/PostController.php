@@ -3,6 +3,14 @@
 class PostController extends \BaseController {
 
 	/**
+     * make this part password protected
+     */
+    public function __construct()
+    {
+        $this->beforeFilter('auth.basic');
+    }
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
