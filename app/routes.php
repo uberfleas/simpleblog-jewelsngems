@@ -12,14 +12,19 @@
 */
 
 //Login Route
-Route::any("/users", array(
+Route::any("/posts", array(
 	"as"	=> "users/login",
 	"uses"	=> "UserController@loginAction"
 ));
 
 Route::get('/', function()
 {
-	return View::make('home');
+	$posts = Post::all();
+
+	return View::make('home')
+		->with('posts',$posts);
 });
 
 Route::resource('users', 'UserController');
+
+Route::resource('posts', 'PostController');

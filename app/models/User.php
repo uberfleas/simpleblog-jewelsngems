@@ -65,4 +65,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+	//---Database Relation Definitions
+	
+	public function post() 
+	{
+		$this->hasMany('Post');
+	}
+
+	//---Inverse Database Relation Definitions
+
 }

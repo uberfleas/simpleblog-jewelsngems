@@ -4,7 +4,7 @@
 <!-- if there are creation errors, they will show here -->
 {{ HTML::ul($errors->all()) }}
 
-<div class="col-sm-8">
+<div class="col-sm-10 col-sm-offset-1">
 
 <h1>Create a New User</h1>
 
