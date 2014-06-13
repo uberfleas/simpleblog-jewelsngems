@@ -12,7 +12,7 @@
 */
 
 //Login Route
-Route::any("/posts", array(
+Route::any("/users", array(
 	"as"	=> "users/login",
 	"uses"	=> "UserController@loginAction"
 ));
