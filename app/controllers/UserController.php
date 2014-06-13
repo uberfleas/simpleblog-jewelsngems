@@ -184,4 +184,21 @@ class UserController extends BaseController {
 		//
 	}
 
+	//This added for compatability with laravel 4.126
+
+	public function getRememberToken()
+	{
+    	return $this->remember_token;
+	}
+
+	public function setRememberToken($value)
+	{
+    	$this->remember_token = $value;
+	}
+
+	public function getRememberTokenName()
+	{
+    	return 'remember_token';
+	}
+
 }
