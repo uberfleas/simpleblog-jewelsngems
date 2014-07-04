@@ -3,15 +3,19 @@
 	<br />
 	<br />
 	<div class="col-sm-10 col-sm-offset-1">
+	<div class="jng-spacer"></div>
 	@foreach ($posts as $post) 
 		<div class="row">
 		<a class="h1" href="posts/{{ $post->id }}">{{ $post->title }}</a>
-		<p class="h2 panel-content">{{ $post->content }}</p>
-		<span class="h3">by JewelsNGems</span>
+		<p class="panel-content">{{ $post->content }}</p>
+		<span class="h3">by {{ $post->user->fname.' '.$post->user->lname }}</span>
 		</div>
 		<br />
 		<br />
 	@endforeach
+
+	{{ $posts->links() }}
+
 	</div>
 
 	<div class="col-sm-10 col-sm-offset-1">

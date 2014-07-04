@@ -27,7 +27,7 @@
 			<tr>
 				<td>{{ $value->id }}</td>
 				<td>{{ $value->content }}</td>
-				<td>{{ $value->userid }}</td>
+				<td><a href="users/{{ $value->user_id }}">{{ $value->user->fname }} {{ $value->user->lname }}</a></td>
 				<td>{{ $value->title }}</td>
 				<td>{{ $value->created_at }}</td>
 				<td>{{ $value->updated_at }}</td>

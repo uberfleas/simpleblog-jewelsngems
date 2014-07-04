@@ -21,7 +21,7 @@
 
 		@if (Auth::check()) 
 
-			{{ Form::hidden('userid',Auth::getUser()->getAuthIdentifier()) }}
+			{{ Form::hidden('user_id',Auth::getUser()->getAuthIdentifier()) }}
 
 		@endif
 

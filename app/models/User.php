@@ -5,6 +5,8 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
+	protected $fillable = array('fname','lname','email','password');
+
 	public static $rules = array(
 		'fname' 					=> 'required|alpha|min:2',
 		'lname' 					=> 'required|min:2',
@@ -67,7 +69,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	//---Database Relation Definitions
 	
-	public function post() 
+	public function posts() 
 	{
 		$this->hasMany('Post');
 	}

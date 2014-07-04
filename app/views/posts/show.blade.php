@@ -8,7 +8,7 @@
 
 <p class="h2">{{ $post->content }}</p>
 
-<h3>by JewelsNGems</h3>
+<h3>by {{ $post->user->fname }} {{ $post->user->lname }}</h3>
 
 <br />
 <br />

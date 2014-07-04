@@ -19,7 +19,7 @@ Route::any("/users", array(
 
 Route::get('/', function()
 {
-	$posts = Post::all();
+	$posts = Post::idDescending()->paginate(3);
 
 	return View::make('home')
 		->with('posts',$posts);

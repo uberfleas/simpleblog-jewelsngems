@@ -57,7 +57,7 @@ class PostController extends \BaseController {
 			//store
 			$post = new Post;
 
-			$post->userid = Input::get('userid');
+			$post->user_id = Input::get('user_id');
 			$post->title = Input::get('title');
 			$post->content = Input::get('content');
 

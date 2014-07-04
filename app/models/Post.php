@@ -2,7 +2,7 @@
 
 class Post extends Eloquent {
 
-	protected $guarded = array();
+	protected $fillable = array('content','title');
 
 	public static $rules = array();
 
@@ -13,5 +13,12 @@ class Post extends Eloquent {
 	
 
 	//---Relationship Definitions
+	
+	//---Scopes
+	
+	public function scopeIdDescending($query)
+    {
+        return $query->orderBy('id','desc');
+    } 
 
 }
