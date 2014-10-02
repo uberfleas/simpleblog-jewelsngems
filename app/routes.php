@@ -28,3 +28,10 @@ Route::get('/', function()
 Route::resource('users', 'UserController');
 
 Route::resource('posts', 'PostController');
+
+Route::get('/contact', function()
+{
+    return View::make('contact');
+});
+
+Route::post('/contact', array("uses" => "ContactController@submitAction"));

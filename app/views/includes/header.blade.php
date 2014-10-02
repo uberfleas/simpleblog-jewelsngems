@@ -5,7 +5,10 @@
 	<div class="nav">
 		<ul class="nav nav-pills">
   			<li><a class="btn-sm btn-info" href="/">Home</a></li>
-  			<li><a class="btn-sm btn-info" href="/posts">Posts</a></li>
+  			@if (Auth::check())
+  				<li><a class="btn-sm btn-info" href="/posts">Posts</a></li>
+  			@endif
+  			<li><a class="btn-sm btn-info" href="/contact">Contact Me</a></li>
   			<li><a class="btn-sm btn-info" href="/users">Login</a></li>
 		</ul>
 	</div><!-- .nav -->
